@@ -1,16 +1,28 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-void solution();
+void solution(vector<int> *numbers);
 
 int main()
 {
-    solution();
+    vector<int> nums;
+    int temp;
+
+    while (cin >> temp)
+    {
+        nums.push_back(temp);
+    }
+
+    solution(&nums);
     return 1;
 }
 
-void solution()
+void solution(vector<int> *numbers)
 {
-    std::cout << "Hello Beautiful World!" << std::endl;
+    for (size_t i = 0; i < (*numbers).size(); i++)
+    {
+        printf("%d\n", (*numbers).at(i));
+    }
 }
